@@ -1,5 +1,5 @@
 int total_capacity_of_tank = 10000;
-int watercapacity=400;
+int watercapacity=1000;
 int waterlevel = 600;
 int A = 8;
 int B = 9;
