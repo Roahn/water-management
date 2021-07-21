@@ -1,5 +1,5 @@
 int total_capacity_of_tank = 10000;
-int watercapacity=10000;
+int watercapacity=400;
 int waterlevel = 600;
 int A = 8;
 int B = 9;
@@ -105,7 +105,7 @@ void loop()
 { 
       if(waterflowed1==0){
         Serial.println("-------------------------------------------------------------------------------------------------------");
-        Serial.println("**********||||||||||--------------WELCOME TO WATER MANAGEMENT SYSTEM ---------------|||||||||||||*******");
+        Serial.println("***||||||||||--------------WELCOME TO WATER MANAGEMENT SYSTEM ---------------|||||||||||||**");
              Serial.println("-------------------------------------------------------------------------------------------------------");
         }
         watercapacity= watercapacity-waterflowed1;
@@ -270,10 +270,10 @@ if (wf159 > waterlevel)
    // delay(50000);
 }
 
- // digitalWrite(CD, LOW);
-  //  digitalWrite(CC, LOW);
-   // digitalWrite(CB, LOW);
-    //digitalWrite(CA, LOW);
+ digitalWrite(CD, LOW);
+    digitalWrite(CC, LOW);
+    digitalWrite(CB, LOW);
+    digitalWrite(CA, LOW);
 //count=0;
 //interrupts();
 // delay(1000);
@@ -295,10 +295,10 @@ if (wf159 > waterlevel)
 
 //Serial.print("    Waterflowed  \t");
 
-if (watercapacity < 400)
+if (watercapacity <= 400)
 {
     digitalWrite(13, HIGH);
-    //Serial.println("\t\t TANK IS EMPTY ");
+    Serial.println("\t\t TANK IS EMPTY ");
 }else{
   
     digitalWrite(13, LOW);
@@ -307,7 +307,7 @@ if (watercapacity < 400)
 if (watercapacity >= 10000)
 {
     digitalWrite(12, HIGH);
-    //Serial.println("\t\t TANK IS EMPTY ");
+    Serial.println("\t\t TANK IS FULL ");
 }
 else{
   digitalWrite(12, LOW);
@@ -317,10 +317,8 @@ else{
 if(watercapacity>400){
   tb();
   }
-
-
-//Serial.println("");
-//Serial.println("///////////////////////////////////////////////////////////////////////////////////////////////////////////////");
+Serial.println("");
+Serial.println("///////////////////////////////////////////////////////////////////////////////////////////////////////////////");
 
 }
 void tb()
@@ -338,9 +336,7 @@ void tb()
 
 
 
-
-
-    if (wf09 > waterlevel)
+ if (wf09 > waterlevel)
     {
         flag0=false;
         digitalWrite(CD, LOW);
@@ -497,24 +493,11 @@ if (wf159 > waterlevel)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
         
 
         if (i == 0)
         {
-           // Serial.print(i);
+            Serial.print(i);
             digitalWrite(D, LOW);
             digitalWrite(C, LOW);
             digitalWrite(B, LOW);
@@ -522,7 +505,7 @@ if (wf159 > waterlevel)
         }
         if (i == 1)
         {
-          //  Serial.print(i);
+            Serial.print(i);
             digitalWrite(D, LOW);
             digitalWrite(C, LOW);
             digitalWrite(B, LOW);
@@ -530,7 +513,7 @@ if (wf159 > waterlevel)
         }
         if (i == 2)
         {
-          //  Serial.print(i);
+            Serial.print(i);
             digitalWrite(D, LOW);
             digitalWrite(C, LOW);
             digitalWrite(B, HIGH);
@@ -538,7 +521,7 @@ if (wf159 > waterlevel)
         }
         if (i == 3)
         {
-          //  Serial.print(i);
+            Serial.print(i);
             digitalWrite(D, LOW);
             digitalWrite(C, LOW);
             digitalWrite(B, HIGH);
@@ -546,7 +529,7 @@ if (wf159 > waterlevel)
         }
         if (i == 4)
         {
-          //  Serial.print(i);
+            Serial.print(i);
             digitalWrite(D, LOW);
             digitalWrite(C, HIGH);
             digitalWrite(B, LOW);
@@ -554,7 +537,7 @@ if (wf159 > waterlevel)
         }
         if (i == 5)
         {
-           // Serial.print(i);
+            Serial.print(i);
             digitalWrite(D, LOW);
             digitalWrite(C, HIGH);
             digitalWrite(B, LOW);
@@ -562,7 +545,7 @@ if (wf159 > waterlevel)
         }
         if (i == 6)
         {
-           // Serial.print(i);
+            Serial.print(i);
             digitalWrite(D, LOW);
             digitalWrite(C, HIGH);
             digitalWrite(B, HIGH);
@@ -570,7 +553,7 @@ if (wf159 > waterlevel)
         }
         if (i == 7)
         {
-          //  Serial.print(i);
+            Serial.print(i);
             digitalWrite(D, LOW);
             digitalWrite(C, HIGH);
             digitalWrite(B, HIGH);
@@ -578,7 +561,7 @@ if (wf159 > waterlevel)
         }
         if (i == 8)
         {
-           // Serial.print(i);
+            Serial.print(i);
             digitalWrite(D, HIGH);
             digitalWrite(C, LOW);
             digitalWrite(B, LOW);
@@ -586,7 +569,7 @@ if (wf159 > waterlevel)
         }
         if (i == 9)
         {
-          //  Serial.print(i);
+            Serial.print(i);
             digitalWrite(D, HIGH);
             digitalWrite(C, LOW);
             digitalWrite(B, LOW);
@@ -594,7 +577,7 @@ if (wf159 > waterlevel)
         }
         if (i == 10)
         {
-           // Serial.print(i);
+            Serial.print(i);
             digitalWrite(D, HIGH);
             digitalWrite(C, LOW);
             digitalWrite(B, HIGH);
@@ -602,7 +585,7 @@ if (wf159 > waterlevel)
         }
         if (i == 11)
         {
-           // Serial.print(i);
+            Serial.print(i);
             digitalWrite(D, LOW);
             digitalWrite(C, LOW);
             digitalWrite(B, LOW);
@@ -610,7 +593,7 @@ if (wf159 > waterlevel)
         }
         if (i == 12)
         {
-          //  Serial.print(i);
+            Serial.print(i);
             digitalWrite(D, HIGH);
             digitalWrite(C, HIGH);
             digitalWrite(B, LOW);
@@ -618,7 +601,7 @@ if (wf159 > waterlevel)
         }
         if (i == 13)
         {
-          //  Serial.print(i);
+            Serial.print(i);
             digitalWrite(D, HIGH);
             digitalWrite(C, HIGH);
             digitalWrite(B, LOW);
@@ -626,7 +609,7 @@ if (wf159 > waterlevel)
         }
         if (i == 14)
         {
-           // Serial.print(i);
+            Serial.print(i);
             digitalWrite(D, HIGH);
             digitalWrite(C, HIGH);
             digitalWrite(B, HIGH);
@@ -634,7 +617,7 @@ if (wf159 > waterlevel)
         }
         if (i == 15)
         {
-            //Serial.print(i);
+            Serial.print(i);
             digitalWrite(D, HIGH);
             digitalWrite(C, HIGH);
             digitalWrite(B, HIGH);
@@ -652,15 +635,15 @@ if (wf159 > waterlevel)
         waterflowed = waterflowed + flowrate;
         waterflowed1 = waterflowed / 1000;
 
-        //Serial.print("   Waterflowed per sec  \t");
+        Serial.print("   Waterflowed per sec  \t");
         // Serial.print(" per sec ");
-        //Serial.print(flowrate2);
-        //Serial.print(" ml ");
-        //Serial.print("        Total water Waterflowed  \t");
-        //Serial.print(waterflowed1);
-        //Serial.print("  */* ");
+        Serial.print(flowrate2);
+        Serial.print(" ml ");
+        Serial.print("        Total water Waterflowed  \t");
+        Serial.print(waterflowed1);
+        //Serial.print("  / ");
 
-        //Serial.print("          Waterflowed  \t");
+        Serial.print("          Waterflowed  \t");
 
         if (i == 0)
         { 
@@ -670,7 +653,7 @@ if (wf159 > waterlevel)
             wf0 = wf0 + flowrate;
             wf09 = wf0 / 1000;
             // wf094=wf09+(wf09)*0.6;
-           // Serial.print(wf09);
+            Serial.print(wf09);
         }
         if (i == 1)
         {
@@ -680,7 +663,7 @@ if (wf159 > waterlevel)
             wf1 = wf1 + flowrate;
             wf19 = wf1 / 1000;
             // wf194=wf19+(wf19)*0.6;
-            //Serial.print(wf19);
+            Serial.print(wf19);
         }
         if (i == 2)
         { 
@@ -690,7 +673,7 @@ if (wf159 > waterlevel)
             wf2 = wf2 + flowrate;
             wf29 = wf2 / 1000;
             //  wf294=wf29+(wf29)*0.6;
-           // Serial.print(wf29);
+            Serial.print(wf29);
         }
         if (i == 3)
         { 
@@ -700,7 +683,7 @@ if (wf159 > waterlevel)
             wf3 = wf3 + flowrate;
             wf39 = wf3 / 1000;
             // wf394=wf39+(wf39)*0.6;
-           // Serial.print(wf39);
+            Serial.print(wf39);
         }
         if (i == 4)
         { 
@@ -710,7 +693,7 @@ if (wf159 > waterlevel)
             wf4 = wf4 + flowrate;
             wf49 = wf4 / 1000;
             // wf494=wf49+(wf19)*0.6;
-           // Serial.print(wf49);
+            Serial.print(wf49);
         }
         if (i == 5)
         { 
@@ -719,7 +702,7 @@ if (wf159 > waterlevel)
             }
             wf5 = wf5 + flowrate;
             wf59 = wf5 / 1000;
-          //  Serial.print(wf59);
+            Serial.print(wf59);
         }
         if (i == 6)
         { 
@@ -729,7 +712,7 @@ if (wf159 > waterlevel)
             wf6 = wf6 + flowrate;
             wf69 = wf6 / 1000;
             // wf694=wf69+(wf69)*0.6;
-           // Serial.print(wf69);
+            Serial.print(wf69);
         }
         if (i == 7)
         { 
@@ -739,7 +722,7 @@ if (wf159 > waterlevel)
             wf7 = wf7 + flowrate;
             wf79 = wf7 / 1000;
             //  wf794=wf79+(wf79)*0.6;
-           // Serial.print(wf79);
+            Serial.print(wf79);
         }
         if (i == 8)
         { 
@@ -749,7 +732,7 @@ if (wf159 > waterlevel)
             wf8 = wf8 + flowrate;
             wf89 = wf8 / 1000;
             // wf894=wf89+(wf89)*0.6;
-           // Serial.print(wf89);
+            Serial.print(wf89);
         }
         if (i == 9)
         { 
@@ -759,7 +742,7 @@ if (wf159 > waterlevel)
             wf9 = wf9 + flowrate;
             wf99 = wf9 / 1000;
             // wf994=wf99+(wf99)*0.6;
-           // Serial.print(wf99);
+            Serial.print(wf99);
         }
         if (i == 10)
         { 
@@ -769,7 +752,7 @@ if (wf159 > waterlevel)
             wf10 = wf10 + flowrate;
             wf109 = wf10 / 1000;
             // wf1094=wf109+(wf109)*0.6;
-           // Serial.print(wf109);
+            Serial.print(wf109);
         }
         if (i == 11)
         {
@@ -779,7 +762,7 @@ if (wf159 > waterlevel)
             wf11 = wf11 + flowrate;
             wf119 = wf11 / 1000;
             // wf1194=wf19+(wf119)*0.6;
-           // Serial.print(wf119);
+            Serial.print(wf119);
         }
         if (i == 12)
         { 
@@ -789,7 +772,7 @@ if (wf159 > waterlevel)
             wf12 = wf12 + flowrate;
             wf129 = wf12 / 1000;
             // wf194=wf129+(wf129)*0.6;
-          //  Serial.print(wf129);
+            Serial.print(wf129);
         }
         if (i == 13)
         {   if(flag13 == false){
@@ -798,7 +781,7 @@ if (wf159 > waterlevel)
             wf13 = wf13 + flowrate;
             wf139 = wf13 / 1000;
             // wf1394=wf139+(wf139)*0.6;
-         //   Serial.print(wf139);
+            Serial.print(wf139);
         }
 
         if (i == 14)
@@ -809,7 +792,7 @@ if (wf159 > waterlevel)
             wf14 = wf14 + flowrate;
             wf149 = wf14 / 1000;
             // wf1494=wf149+(wf149)*0.6;
-           // Serial.print(wf149);
+            Serial.print(wf149);
         }
         if (i == 15)
         { 
@@ -820,10 +803,10 @@ if (wf159 > waterlevel)
             wf159 = wf15 / 1000;
             // wf1594=wf159+(wf159)*0.6;
 
-          //  Serial.print(wf159);
+            Serial.print(wf159);
         }
 
-        //Serial.println(" litre");
+        Serial.println(" litre");
     }
 }
 void flow()
